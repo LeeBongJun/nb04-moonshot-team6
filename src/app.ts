@@ -1,12 +1,3 @@
-import authRouter from "./routes/auth.route.js";
-import userRouter from "./routes/user.route.js";
-import uploadRouter from "./routes/upload.route.js";
-import dashboardRouter from "./routes/dashboard.route.js";
-import projectRouter from "./routes/project.route.js";
-import taskRouter from "./routes/task.router.js";
-import subtaskRouter from "./routes/subtask.router.js";
-import memberRouter from "./routes/member.route.js";
-import commentRouter from "./routes/comment.route.js"
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
@@ -25,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://nb04-moonshot-team6-front.onrender.com",
     credentials: true,
     allowedHeaders: ["Authorization", "Content-Type"],
   })
@@ -42,24 +33,6 @@ app.use(
 );
 app.use(passport.initialize());
 // app.use(passport.session());
-
-app.use("/", uploadRouter); // 파일 업로드
-
-app.use("/", authRouter); // 인증
-
-app.use("/", userRouter); // 유저
-
-app.use("/", projectRouter); // 프로젝트
-
-app.use("/", taskRouter); // 할일
-
-app.use("/", subtaskRouter); // 하위 할일
-
-app.use("/", dashboardRouter); // 대쉬보드 칸반
-
-app.use("/", memberRouter); // 멤버
-
-app.use("/", commentRouter); // 댓글
 
 app.use("/", router);
 
