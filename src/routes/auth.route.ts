@@ -72,7 +72,7 @@ router.get(
         path: "/",
       });
 
-      const redirectUrl = new URL("http://localhost:3000/");
+      const redirectUrl = new URL("http://localhost:3001/");
 
       res.redirect(redirectUrl.toString());
     } catch (err) {

@@ -1,4 +1,3 @@
-
 export const ACCESS_TOKEN_EXPIRES_IN = '15m';
 export const REFRESH_TOKEN_EXPIRES_DAYS = 30 * 60 * 60 * 24 * 1000;
 export const ACCESS_TOKEN_SECRET = process.env.JWT_ACCESS_SECRET || 'change_me_access_secret';
